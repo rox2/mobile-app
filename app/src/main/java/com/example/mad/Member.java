@@ -4,10 +4,6 @@ public class Member {
 
     private float ht;
 
-    public Member(){
-
-    }
-
     public float getHt() {
         return ht;
     }

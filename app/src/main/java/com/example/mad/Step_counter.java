@@ -8,8 +8,14 @@ import android.hardware.SensorEvent;
 import android.hardware.SensorEventListener;
 import android.hardware.SensorManager;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
+import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
 
 public class Step_counter extends AppCompatActivity implements SensorEventListener {
 
@@ -17,6 +23,12 @@ public class Step_counter extends AppCompatActivity implements SensorEventListen
     SensorManager sensorManager;
     boolean running = false;
 
+    /////////////////////////////
+    EditText txtphone;
+    Button btnsave;
+    DatabaseReference reff;
+    Member member;
+    /////////////////////////////
 
 
     @Override
@@ -25,8 +37,24 @@ public class Step_counter extends AppCompatActivity implements SensorEventListen
         setContentView(R.layout.activity_step_counter);
 
         tv_steps = (TextView) findViewById(R.id.tv_steps);
+        ///////////////////////////////////////////////////////////
 
         sensorManager =(SensorManager) getSystemService(Context.SENSOR_SERVICE);
+        /////////////////////////////////////////////////////////////////
+        txtphone=(EditText)findViewById(R.id.txtphone);
+        btnsave= (Button) findViewById(R.id.btnsave);
+        member=new Member();
+
+        reff= FirebaseDatabase.getInstance().getReference().child("goal_step");
+        btnsave.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View view){
+                float hit = Float.parseFloat((txtphone.getText().toString().trim()));
+                member.setHt(hit);
+
+                reff.child("step 1").setValue(member);
+                Toast.makeText(Step_counter.this, "successfully inserted", Toast.LENGTH_SHORT).show();            }
+        });
     }
 
 
@@ -57,6 +85,7 @@ public class Step_counter extends AppCompatActivity implements SensorEventListen
     public void onAccuracyChanged(Sensor sensor,int accuracy){
 
     }
+
 
 
 }

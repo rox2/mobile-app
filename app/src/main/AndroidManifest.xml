@@ -9,7 +9,6 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".testing"></activity>
         <activity android:name=".Step_counter" />
         <activity android:name=".MainActivity">
             <intent-filter>
