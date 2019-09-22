@@ -12,35 +12,36 @@
         android:layout_height="745dp"
         android:scaleType="fitXY"
         app:srcCompat="@drawable/step"
-        tools:layout_editor_absoluteX="-17dp"
-        tools:layout_editor_absoluteY="-22dp" />
+        tools:layout_editor_absoluteX="-16dp"
+        tools:layout_editor_absoluteY="-30dp" />
 
     <EditText
-        android:id="@+id/editText4"
+        android:id="@+id/txtphone"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="88dp"
         android:ems="10"
         android:hint="steps"
         android:inputType="textPersonName"
-        app:layout_constraintBottom_toTopOf="@+id/editText5"
+        app:layout_constraintBottom_toTopOf="@+id/tv_steps"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.919"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="1.0" />
 
-    <EditText
-        android:id="@+id/editText5"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+    <TextView
+        android:id="@+id/tv_steps"
+        android:layout_width="178dp"
+        android:layout_height="42dp"
         android:layout_marginBottom="100dp"
         android:ems="10"
         android:hint="steps"
         android:inputType="textPersonName"
+        android:textSize="18sp"
         app:layout_constraintBottom_toTopOf="@+id/editText6"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.919"
+        app:layout_constraintHorizontal_bias="0.781"
         app:layout_constraintStart_toStartOf="parent" />
 
     <EditText
@@ -70,7 +71,7 @@
         app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
-        android:id="@+id/textView3"
+        android:id="@+id/tv_steps"
         android:layout_width="147dp"
         android:layout_height="53dp"
         android:layout_marginBottom="100dp"
@@ -85,11 +86,24 @@
         android:layout_width="119dp"
         android:layout_height="37dp"
         android:text="Set up your goal"
-        app:layout_constraintBottom_toTopOf="@+id/textView3"
-        app:layout_constraintEnd_toEndOf="@+id/editText4"
+        app:layout_constraintBottom_toTopOf="@+id/tv_steps"
+        app:layout_constraintEnd_toEndOf="@+id/txtphone"
         app:layout_constraintHorizontal_bias="0.065"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.578" />
+        app:layout_constraintVertical_bias="0.623" />
+
+    <Button
+        android:id="@+id/btnsave"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="onClickListener"
+        android:text="Save"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.907"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.341" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
