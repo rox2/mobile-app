@@ -50,7 +50,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        Toast.makeText(MainActivity.this,"firebase connected successfully",Toast.LENGTH_LONG).show();
+        Toast.makeText(MainActivity.this,"connectected to  firebase successfully",Toast.LENGTH_LONG).show();
 
         intit();
 
