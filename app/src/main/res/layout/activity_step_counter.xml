@@ -22,7 +22,7 @@
         android:layout_marginBottom="88dp"
         android:ems="10"
         android:hint="steps"
-        android:inputType="textPersonName"
+        android:inputType="number"
         app:layout_constraintBottom_toTopOf="@+id/tv_steps"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.919"
@@ -39,13 +39,13 @@
         android:hint="steps"
         android:inputType="textPersonName"
         android:textSize="18sp"
-        app:layout_constraintBottom_toTopOf="@+id/editText6"
+        app:layout_constraintBottom_toTopOf="@+id/cal"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.781"
         app:layout_constraintStart_toStartOf="parent" />
 
     <EditText
-        android:id="@+id/editText6"
+        android:id="@+id/cal"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="192dp"
@@ -66,7 +66,7 @@
         android:layout_marginBottom="232dp"
         android:text="Total calories burned"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="@+id/editText6"
+        app:layout_constraintEnd_toEndOf="@+id/cal"
         app:layout_constraintHorizontal_bias="0.062"
         app:layout_constraintStart_toStartOf="parent" />
 
@@ -97,13 +97,28 @@
         android:id="@+id/btnsave"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:background="#AF805C"
         android:onClick="onClickListener"
-        android:text="Save"
-        app:layout_constraintBottom_toBottomOf="@+id/imageView2"
+        android:text="Save/RENEW"
+        app:layout_constraintBottom_toTopOf="@+id/tv_steps"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.907"
+        app:layout_constraintHorizontal_bias="0.551"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.341" />
+        app:layout_constraintTop_toBottomOf="@+id/txtphone"
+        app:layout_constraintVertical_bias="0.372" />
+
+    <Button
+        android:id="@+id/btndlt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#AB7C56"
+        android:onClick="onClickListener"
+        android:text="DELETE"
+        app:layout_constraintBottom_toTopOf="@+id/tv_steps"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.949"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtphone"
+        app:layout_constraintVertical_bias="0.294" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

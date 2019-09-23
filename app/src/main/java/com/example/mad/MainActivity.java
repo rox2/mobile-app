@@ -10,6 +10,8 @@ import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
     public Button step;
+    public Button navi;
+
 
     public void intit(){
         step = (Button) findViewById(R.id.btn4);
@@ -24,6 +26,20 @@ public class MainActivity extends AppCompatActivity {
     });
 
 }
+
+    public void intit2(){
+        navi=(Button)findViewById(R.id.btnnavi);
+        step.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View view){
+
+                Intent count =new Intent(MainActivity.this,navi.class);
+
+                startActivity(count);
+            }
+        });
+
+    }
 //------------------------------------------------------------//
     //protected void
 
@@ -34,7 +50,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        Toast.makeText(MainActivity.this,"connection sucess",Toast.LENGTH_LONG).show();
+        Toast.makeText(MainActivity.this,"firebase connected successfully",Toast.LENGTH_LONG).show();
 
         intit();
 

@@ -14,10 +14,9 @@
         android:scaleType="fitCenter"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.505"
+        app:layout_constraintHorizontal_bias="0.504"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.497"
         app:srcCompat="@drawable/wall" />
 
     <ImageView
@@ -36,6 +35,7 @@
         android:id="@+id/imageView17"
         android:layout_width="111dp"
         android:layout_height="114dp"
+        android:alpha="127"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.903"
@@ -46,15 +46,16 @@
 
     <ImageView
         android:id="@+id/imageView18"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="150dp"
+        android:layout_height="118dp"
+        android:alpha="100"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.874"
+        app:layout_constraintHorizontal_bias="0.976"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.1"
-        app:srcCompat="@drawable/iconmaterialface" />
+        app:layout_constraintVertical_bias="0.082"
+        app:srcCompat="@mipmap/ic_launcher_round" />
 
     <ImageView
         android:id="@+id/imageView19"
@@ -69,10 +70,11 @@
         app:layout_constraintVertical_bias="0.272"
         app:srcCompat="@drawable/word" />
 
-    <ImageView
-        android:id="@+id/imageView20"
-        android:layout_width="39dp"
-        android:layout_height="17dp"
+    <Button
+        android:id="@+id/btnnavi"
+        android:layout_width="32dp"
+        android:layout_height="25dp"
+        android:background="@drawable/iconioniciosarrowoundback"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.041"
