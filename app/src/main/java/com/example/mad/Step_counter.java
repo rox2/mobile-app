@@ -104,7 +104,7 @@ public class Step_counter extends AppCompatActivity implements SensorEventListen
     @Override
     public void onSensorChanged(SensorEvent event){
         if(running){
-            tv_steps.setText(String.valueOf(event.values[0]));
+            tv_steps.setText(String.valueOf(event.values[1]));
 
         }
     }
@@ -112,7 +112,7 @@ public class Step_counter extends AppCompatActivity implements SensorEventListen
     public void onAccuracyChanged(Sensor sensor,int accuracy){
 
     }
-
+//test
 
 
 }
